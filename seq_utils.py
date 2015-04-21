@@ -10,7 +10,11 @@ def complement_codon(input_codon):
     second_base = input_codon[1]
     third_base = input_codon[2]
 
-    complemented_codon = first_base + second_base + third_base
+    first_complemented_base = base_complements[first_base]
+    second_complemented_base = base_complements[second_base]
+    third_complemented_base = base_complements[third_base]
+
+    complemented_codon = first_complemented_base + second_complemented_base + third_complemented_base
 
     return complemented_codon
 

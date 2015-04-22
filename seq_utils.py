@@ -18,3 +18,16 @@ def complement_codon(input_codon):
 
     return complemented_codon
 
+
+def is_codon_correct(input_codon):
+    allowed_bases = ['A', 'T', 'C', 'G', 'N', '?', '-']
+
+    for base in input_codon:
+        if base in allowed_bases:
+            continue
+        else:
+            print("Your codon is incorrect")
+            return False
+
+    return True
+

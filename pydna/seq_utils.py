@@ -1,4 +1,9 @@
 def complement_codon(input_codon):
+    """
+
+    :param input_codon:
+    :return:
+    """
     base_complements = {
             'A': 'T',
             'T': 'A',
@@ -20,6 +25,20 @@ def complement_codon(input_codon):
 
 
 def is_codon_correct(input_codon):
+    """Validates a codon by checking that allowed list of bases are included
+    in our input variable.
+
+    :param input_codon: codon, may be valid or not
+    :return: True or False
+
+    >>> from pydna import seq_utils
+    >>> input_codon = 'ATC'
+    >>> seq_utils.is_codon_correct(input_codon)
+    True
+    """
+    if type(input_codon) == float:
+        return False
+
     allowed_bases = ['A', 'T', 'C', 'G', 'N', '?', '-']
 
     for base in input_codon:

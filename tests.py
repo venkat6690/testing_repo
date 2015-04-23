@@ -1,3 +1,5 @@
+from pydna import seq_utils
+
 import unittest
 
 import seq_utils
